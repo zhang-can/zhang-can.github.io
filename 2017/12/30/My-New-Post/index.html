@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="[toc] TESTthis is a New post for test! 啊啊啊">
+<meta name="description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My New Post">
 <meta property="og:url" content="http://yoursite.com/2017/12/30/My-New-Post/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[toc] TESTthis is a New post for test! 啊啊啊">
+<meta property="og:description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-30T02:24:20.935Z">
+<meta property="og:updated_time" content="2017-12-30T02:37:48.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My New Post">
-<meta name="twitter:description" content="[toc] TESTthis is a New post for test! 啊啊啊">
+<meta name="twitter:description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
 
 
 
@@ -299,9 +299,58 @@
       
 
       
-        <p>[toc]</p>
-<h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><p>this is a New post for test!</p>
-<p>啊啊啊</p>
+        <h1 id="Linux（Ubuntu为例）"><a href="#Linux（Ubuntu为例）" class="headerlink" title="Linux（Ubuntu为例）"></a>Linux（Ubuntu为例）</h1><h2 id="安装libssh"><a href="#安装libssh" class="headerlink" title="安装libssh"></a>安装libssh</h2><ol>
+<li><p>下载libssh2-1.2.8</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压缩、配置、安装</p>
+<p> <strong>PS:路径替换成自己的openssl安装目录</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf libssh2-1.2.8.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> libssh2-1.2.8/</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/libssh2 --with-openssl --with-libssl-prefix=/usr/<span class="built_in">local</span>/openssl LDFLAGS=-ldl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装php-ssh2扩展"><a href="#安装php-ssh2扩展" class="headerlink" title="安装php ssh2扩展"></a>安装php ssh2扩展</h2><ol>
+<li><p>下载ssh2-0.12</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://pecl.php.net/get/ssh2-0.12.tgz --no-check-certificate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压缩、配置、安装</p>
+<p> <strong>PS:路径替换成自己的libssh2安装目录和php-config配置文件地址</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf ssh2-0.12.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ssh2-0.12/</span><br><span class="line"></span><br><span class="line">phpize</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/ssh2 --with-ssh2=/usr/<span class="built_in">local</span>/libssh2 --with-php-config=/usr/<span class="built_in">local</span>/php/bin/php-config</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="配置php-ini"><a href="#配置php-ini" class="headerlink" title="配置php.ini"></a>配置php.ini</h2><ol>
+<li><p>找到ssh2.so的位置</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -name ssh2.so</span><br></pre></td></tr></table></figure>
+<p> <em>/home/xxxxxx/dl/ssh2-0.12/modules/ssh2.so</em></p>
+<p> <em>/home/xxxxxx/dl/ssh2-0.12/.libs/ssh2.so</em></p>
+</li>
+<li><p>查看php扩展安装目录</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php-config --extension-dir</span><br></pre></td></tr></table></figure>
+<p> <em>/usr/local/php/lib/php/extensions/no-debug-non-zts-20131226</em></p>
+</li>
+<li><p>配置php.ini，重启Apache</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ssh2.so php扩展安装目录</span><br></pre></td></tr></table></figure>
+<p> <em>cp /home/xxxxxx/dl/ssh2-0.12/modules/ssh2.so /usr/local/php/lib/php/extensions/no-debug-non-zts-20131226</em></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/php/etc/php.ini 加入 extension=ssh2.so</span><br><span class="line"></span><br><span class="line">sudo /etc/init.d/httpd restart</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ol>
+<li><p>下载 php extension ssh2</p>
+<p> 下载地址: <a href="http://windows.php.net/downloads/pecl/releases/ssh2/0.12/" target="_blank" rel="noopener">http://windows.php.net/downloads/pecl/releases/ssh2/0.12/</a></p>
+<p> 根据自己PHP的版本去下载。</p>
+<p> <strong>注意：ts是线程安全的，nts是线程不安全的，可通过phpinfo()中的Thread Safety选项查看，enable是线程安全的，x86是32位系统的，x64是64位系统的。</strong></p>
+</li>
+<li><p>解压完后，会有三个文件，libssh2.dll、php_ssh2.dll、php_ssh2.pdb。</p>
+</li>
+<li><p>将 php_ssh2.dll、php_ssh2.pdb 放到你的 php 扩展目录下 php/ext/ 下。</p>
+</li>
+<li><p>将libssh2.dll 复制到 C:/windows/system32 和 C:/windows/syswow64 （64位系统才有）各一份</p>
+</li>
+<li><p>php.ini中加入 extension=php_ssh2.dll</p>
+</li>
+<li><p>重启apache，即可使用php执行ssh连接操作了。</p>
+<p> <strong>注意：有必要查看一下php_ssh2.dll是否可用，完成第3、4、5步后，到php目录下打开php.exe,若无效会报错。查看phpinfo()，是否有显示php_ssh2扩展加载成功。</strong></p>
+</li>
+</ol>
 
       
     </div>
@@ -448,7 +497,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST"><span class="nav-number">1.</span> <span class="nav-text">TEST</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux（Ubuntu为例）"><span class="nav-number">1.</span> <span class="nav-text">Linux（Ubuntu为例）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装libssh"><span class="nav-number">1.1.</span> <span class="nav-text">安装libssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装php-ssh2扩展"><span class="nav-number">1.2.</span> <span class="nav-text">安装php ssh2扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置php-ini"><span class="nav-number">1.3.</span> <span class="nav-text">配置php.ini</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
             
 
           </div>
