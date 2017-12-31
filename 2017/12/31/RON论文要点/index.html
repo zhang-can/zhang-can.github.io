@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
+<meta name="description" content="[toc] 摘要 Motivation: smartly associate the best of the region-based (e.g., Faster R-CNN) and region-free (e.g., SSD) methodologies RON mainly focuses on two fundamental problems: (a) multi-scale objec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://www.cannotes.com/2017/12/30/My-New-Post/index.html">
+<meta property="og:title" content="RON论文要点">
+<meta property="og:url" content="http://www.cannotes.com/2017/12/31/RON论文要点/index.html">
 <meta property="og:site_name" content="Can笔记">
-<meta property="og:description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
+<meta property="og:description" content="[toc] 摘要 Motivation: smartly associate the best of the region-based (e.g., Faster R-CNN) and region-free (e.g., SSD) methodologies RON mainly focuses on two fundamental problems: (a) multi-scale objec">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-30T02:37:48.214Z">
+<meta property="og:updated_time" content="2017-12-31T13:22:47.885Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
-<meta name="twitter:description" content="Linux（Ubuntu为例）安装libssh 下载libssh2-1.2.8  1wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate  解压缩、配置、安装  PS:路径替换成自己的openssl安装目录  1234567tar -zxvf libssh2-1.2.8.tar.gzcd">
+<meta name="twitter:title" content="RON论文要点">
+<meta name="twitter:description" content="[toc] 摘要 Motivation: smartly associate the best of the region-based (e.g., Faster R-CNN) and region-free (e.g., SSD) methodologies RON mainly focuses on two fundamental problems: (a) multi-scale objec">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cannotes.com/2017/12/30/My-New-Post/"/>
+  <link rel="canonical" href="http://www.cannotes.com/2017/12/31/RON论文要点/"/>
 
 
 
 
 
-  <title>My New Post | Can笔记</title>
+  <title>RON论文要点 | Can笔记</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.cannotes.com/2017/12/30/My-New-Post/">
+    <link itemprop="mainEntityOfPage" href="http://www.cannotes.com/2017/12/31/RON论文要点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Can">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My New Post</h1>
+          <h1 class="post-title" itemprop="name headline">RON论文要点</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-30T09:59:26+08:00">
-                2017-12-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-31T21:22:32+08:00">
+                2017-12-31
               </time>
             
 
@@ -299,59 +299,78 @@
       
 
       
-        <h1 id="Linux（Ubuntu为例）"><a href="#Linux（Ubuntu为例）" class="headerlink" title="Linux（Ubuntu为例）"></a>Linux（Ubuntu为例）</h1><h2 id="安装libssh"><a href="#安装libssh" class="headerlink" title="安装libssh"></a>安装libssh</h2><ol>
-<li><p>下载libssh2-1.2.8</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.libssh2.org/download/libssh2-1.2.8.tar.gz --no-check-certificate</span><br></pre></td></tr></table></figure>
+        <p>[toc]</p>
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><ol>
+<li>Motivation: smartly associate the best of the region-based (e.g., Faster R-CNN) and region-free (e.g., SSD) methodologies</li>
+<li>RON mainly focuses on two fundamental problems:<ul>
+<li>(a) multi-scale object localization: reverse connection</li>
+<li>(b) negative sample mining: objectness prior<br>(目标先验知识)</li>
+</ul>
 </li>
-<li><p>解压缩、配置、安装</p>
-<p> <strong>PS:路径替换成自己的openssl安装目录</strong></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf libssh2-1.2.8.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> libssh2-1.2.8/</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/libssh2 --with-openssl --with-libssl-prefix=/usr/<span class="built_in">local</span>/openssl LDFLAGS=-ldl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="安装php-ssh2扩展"><a href="#安装php-ssh2扩展" class="headerlink" title="安装php ssh2扩展"></a>安装php ssh2扩展</h2><ol>
-<li><p>下载ssh2-0.12</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://pecl.php.net/get/ssh2-0.12.tgz --no-check-certificate</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解压缩、配置、安装</p>
-<p> <strong>PS:路径替换成自己的libssh2安装目录和php-config配置文件地址</strong></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf ssh2-0.12.tgz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ssh2-0.12/</span><br><span class="line"></span><br><span class="line">phpize</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/ssh2 --with-ssh2=/usr/<span class="built_in">local</span>/libssh2 --with-php-config=/usr/<span class="built_in">local</span>/php/bin/php-config</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<li>Experiments(VGG16, 384X384 input size):<ul>
+<li>VOC 2007: 81.3%</li>
+<li>VOC 2012: 80.7%</li>
+<li>1.5G GPU memory at test phase</li>
+<li>speed: 15 FPS, 3× faster than the Faster R-CNN counterpart.</li>
+</ul>
 </li>
 </ol>
-<h2 id="配置php-ini"><a href="#配置php-ini" class="headerlink" title="配置php.ini"></a>配置php.ini</h2><ol>
-<li><p>找到ssh2.so的位置</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -name ssh2.so</span><br></pre></td></tr></table></figure>
-<p> <em>/home/xxxxxx/dl/ssh2-0.12/modules/ssh2.so</em></p>
-<p> <em>/home/xxxxxx/dl/ssh2-0.12/.libs/ssh2.so</em></p>
-</li>
-<li><p>查看php扩展安装目录</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php-config --extension-dir</span><br></pre></td></tr></table></figure>
-<p> <em>/usr/local/php/lib/php/extensions/no-debug-non-zts-20131226</em></p>
-</li>
-<li><p>配置php.ini，重启Apache</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ssh2.so php扩展安装目录</span><br></pre></td></tr></table></figure>
-<p> <em>cp /home/xxxxxx/dl/ssh2-0.12/modules/ssh2.so /usr/local/php/lib/php/extensions/no-debug-non-zts-20131226</em></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/php/etc/php.ini 加入 extension=ssh2.so</span><br><span class="line"></span><br><span class="line">sudo /etc/init.d/httpd restart</span><br></pre></td></tr></table></figure>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ol>
+<li>RON: associate the merits of region-based and region-free approaches.</li>
+<li>Contributions:<ol>
+<li>RON: a fully convolutional framework for end-to-end object detection</li>
+<li>effective training strategies: negative example mining and data augmentation</li>
+<li>time and resource efficient: conduct<br>extensive design choices</li>
+</ol>
 </li>
 </ol>
-<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ol>
-<li><p>下载 php extension ssh2</p>
-<p> 下载地址: <a href="http://windows.php.net/downloads/pecl/releases/ssh2/0.12/" target="_blank" rel="noopener">http://windows.php.net/downloads/pecl/releases/ssh2/0.12/</a></p>
-<p> 根据自己PHP的版本去下载。</p>
-<p> <strong>注意：ts是线程安全的，nts是线程不安全的，可通过phpinfo()中的Thread Safety选项查看，enable是线程安全的，x86是32位系统的，x64是64位系统的。</strong></p>
-</li>
-<li><p>解压完后，会有三个文件，libssh2.dll、php_ssh2.dll、php_ssh2.pdb。</p>
-</li>
-<li><p>将 php_ssh2.dll、php_ssh2.pdb 放到你的 php 扩展目录下 php/ext/ 下。</p>
-</li>
-<li><p>将libssh2.dll 复制到 C:/windows/system32 和 C:/windows/syswow64 （64位系统才有）各一份</p>
-</li>
-<li><p>php.ini中加入 extension=php_ssh2.dll</p>
-</li>
-<li><p>重启apache，即可使用php执行ssh连接操作了。</p>
-<p> <strong>注意：有必要查看一下php_ssh2.dll是否可用，完成第3、4、5步后，到php目录下打开php.exe,若无效会报错。查看phpinfo()，是否有显示php_ssh2扩展加载成功。</strong></p>
-</li>
+<h1 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h1><p>DPM, R-CNN, SPP-Net, Fast R-CNN, R-FCN, YOLO, SSD</p>
+<h1 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h1><h2 id="网络准备"><a href="#网络准备" class="headerlink" title="网络准备"></a>网络准备</h2><p>VGG-16: pre-trained with ImageNet</p>
+<ul>
+<li>convert FC6 (14th layer) and FC7 (15th layer) to convolutional layers</li>
+<li>use 2×2 convolutional kernels with stride 2 to reduce the resolution of FC7 by half</li>
+</ul>
+<h2 id="Reverse-Connection"><a href="#Reverse-Connection" class="headerlink" title="Reverse Connection"></a>Reverse Connection</h2><ol>
+<li>Inspired from: residual connection</li>
+<li>reverse connection enables former features to have more semantic information</li>
+<li>RON more effective in detecting <strong>all scales</strong> of objects compared with SSD: the reverse connection is learnable, the semantic information of former layers can be significantly enriched.</li>
 </ol>
-
+<h2 id="Reference-Boxes-generate-bounding-boxes-on-feature-maps"><a href="#Reference-Boxes-generate-bounding-boxes-on-feature-maps" class="headerlink" title="Reference Boxes: generate bounding boxes on feature maps"></a>Reference Boxes: generate bounding boxes on feature maps</h2><p>Sk = {(2k − 1) · smin, 2k · smin}, k 2 {1, 2, 3, 4}.</p>
+<h2 id="Objectness-Prior"><a href="#Objectness-Prior" class="headerlink" title="Objectness Prior"></a>Objectness Prior</h2><p>add a 3×3×2 convolutional layer followed by a Softmax function to indicate the existence of an object in each box.</p>
+<p>there are 10 default boxes at each location(2 scales and 5 aspect ratios)</p>
+<p>objectness prior maps could explicitly reflect the existence of an object, it can dramatically reduce the searching space</p>
+<h2 id="Detection-and-Bounding-Box-Regression"><a href="#Detection-and-Bounding-Box-Regression" class="headerlink" title="Detection and Bounding Box Regression"></a>Detection and Bounding Box Regression</h2><ul>
+<li>inception module on the feature maps</li>
+<li>Object detection</li>
+<li>bounding box regression modules</li>
+</ul>
+<h2 id="Combining-Objectness-Prior-with-Detection"><a href="#Combining-Objectness-Prior-with-Detection" class="headerlink" title="Combining Objectness Prior with Detection"></a>Combining Objectness Prior with Detection</h2><p>For training:</p>
+<ol>
+<li>assign a binary class label to each <em>Reference Boxes</em></li>
+<li>if covers object, assign a class-specific label, For each ground truth box:<ul>
+<li>we match it with the candidate region with most jaccard overlap</li>
+<li>match candidate regions to any ground truth with jaccard overlap higher than 0.5</li>
+<li>assign negative labels to the boxes with jaccard overlap lower than 0.3</li>
+</ul>
+</li>
+<li>for detection, samples whose objectness scores are high than threshold op are selected</li>
+</ol>
+<h1 id="Training-and-Testing"><a href="#Training-and-Testing" class="headerlink" title="Training and Testing"></a>Training and Testing</h1><h2 id="Loss-Function"><a href="#Loss-Function" class="headerlink" title="Loss Function"></a>Loss Function</h2><p>For each location, our network has three sibling output branches:</p>
+<ol>
+<li>objectness confidence score</li>
+<li>boundingbox regression loss</li>
+<li>classification loss<br>use a multi-task loss L to jointly train the networks end-to-end</li>
+</ol>
+<h2 id="Joint-Training-and-Testing"><a href="#Joint-Training-and-Testing" class="headerlink" title="Joint Training and Testing"></a>Joint Training and Testing</h2><p>dynamic training strategy:</p>
+<ol>
+<li>all of the positive samples, negative samples are randomly selected</li>
+<li>reduce the sample number: positive and negative samples is 1:3</li>
+</ol>
+<h3 id="Data-augmentation"><a href="#Data-augmentation" class="headerlink" title="Data augmentation"></a>Data augmentation</h3><ol>
+<li>Using the original/flipped input image;</li>
+<li>Randomly sampling a patch and making sure that at least one object’s center is within this patch, overcome the limitation of small objects by adding a small scale for training</li>
+</ol>
+<h3 id="Inference"><a href="#Inference" class="headerlink" title="Inference"></a>Inference</h3>
       
     </div>
     
@@ -375,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/29/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/12/30/My-New-Post/" rel="next" title="My New Post">
+                <i class="fa fa-chevron-left"></i> My New Post
               </a>
             
           </div>
@@ -384,10 +403,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/31/RON论文要点/" rel="prev" title="RON论文要点">
-                RON论文要点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,7 +516,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux（Ubuntu为例）"><span class="nav-number">1.</span> <span class="nav-text">Linux（Ubuntu为例）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装libssh"><span class="nav-number">1.1.</span> <span class="nav-text">安装libssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装php-ssh2扩展"><span class="nav-number">1.2.</span> <span class="nav-text">安装php ssh2扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置php-ini"><span class="nav-number">1.3.</span> <span class="nav-text">配置php.ini</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关工作"><span class="nav-number">3.</span> <span class="nav-text">相关工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络结构"><span class="nav-number">4.</span> <span class="nav-text">网络结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络准备"><span class="nav-number">4.1.</span> <span class="nav-text">网络准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse-Connection"><span class="nav-number">4.2.</span> <span class="nav-text">Reverse Connection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference-Boxes-generate-bounding-boxes-on-feature-maps"><span class="nav-number">4.3.</span> <span class="nav-text">Reference Boxes: generate bounding boxes on feature maps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objectness-Prior"><span class="nav-number">4.4.</span> <span class="nav-text">Objectness Prior</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Detection-and-Bounding-Box-Regression"><span class="nav-number">4.5.</span> <span class="nav-text">Detection and Bounding Box Regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Combining-Objectness-Prior-with-Detection"><span class="nav-number">4.6.</span> <span class="nav-text">Combining Objectness Prior with Detection</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Training-and-Testing"><span class="nav-number">5.</span> <span class="nav-text">Training and Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loss-Function"><span class="nav-number">5.1.</span> <span class="nav-text">Loss Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Joint-Training-and-Testing"><span class="nav-number">5.2.</span> <span class="nav-text">Joint Training and Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-augmentation"><span class="nav-number">5.2.1.</span> <span class="nav-text">Data augmentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inference"><span class="nav-number">5.2.2.</span> <span class="nav-text">Inference</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
